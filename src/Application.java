@@ -6,11 +6,16 @@ public class Application {
 		
 		int numero;
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Digite um número inteiro");
+		System.out.print("Digite um número inteiro: ");
 
 		numero = sc.nextInt();
 		
-		NumeroFibonacci.fibonacci(numero);
+		if (NumeroFibonacci.fibonacci(numero)){
+            System.out.println();
+            System.out.println("O número digitado " + numero + " pertence à sequência de Fibonacci!");
+        } else {
+            System.out.println("Dessa forma, o número digitado " + numero + " NÃO pertence à sequência de Fibonacci!");
+        }
 	}
 
 }
